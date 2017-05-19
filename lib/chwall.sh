@@ -4,7 +4,6 @@ FILE="${files[RANDOM % ${#files[@]}]}"
 
 function change_wall() {
 full_path=$(pwd)/$FILE
-echo $full_path
 	/usr/bin/osascript <<END
 tell application "Finder"
   set myFile to POSIX file "$full_path" as string
