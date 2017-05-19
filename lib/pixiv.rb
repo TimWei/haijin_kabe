@@ -16,7 +16,7 @@ class Pixiv
 		@post_key = ''
 		@illus_ids = []
 		@agent = Mechanize.new { |agent|
-		  agent.user_agent_alias = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+		  agent.user_agent_alias = 'Mac Safari'
 		}
 		get_post_key
 	end
