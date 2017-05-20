@@ -40,3 +40,8 @@ whenever --update-crontab
 4. 調整背景(Optional)
 於[調整桌面背景]中將壁紙放置方式改為[符合螢幕大小]
 
+
+## TODO
+- 接上不同圖源(pixiv.moe)
+- 配置文件
+- OS gem
