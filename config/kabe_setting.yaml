@@ -1,0 +1,9 @@
+# You can select pixiv or pixiv.moe by following value
+# -pixiv 
+# -pixiv_moe
+source: 'pixiv_moe'
+
+# If you chose pixiv as image origin, downloading original image required auth or it'll returning 403 error 
+pixiv:
+  account: 
+  password: 
