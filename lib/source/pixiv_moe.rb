@@ -1,14 +1,10 @@
 class PixivMoe < Source
-	@@main_host  = 'https://api.pixiv.moe/'
-	@@ranking = 'v1/ranking'
-	@@url_pattern = /large":"(https:.\/.\/api\.pixiv\.moe.\/v[0-9].\/image.\/[a-zA-Z0-9]*==)/
-
-	CDN_HOST = 'https://i.pximg.net/'
-	ORIGIN_IMG = '/img-original/img/'
-
 	def initialize
 		super
 		@illus_urls = []
+	@@main_host  = 'https://api.pixiv.moe/'
+	@@ranking = 'v1/ranking'
+	@@url_pattern = /large":"(https:.\/.\/api\.pixiv\.moe.\/v[0-9].\/image.\/[a-zA-Z0-9]*==)/
 	end
 
 	def get_daily number

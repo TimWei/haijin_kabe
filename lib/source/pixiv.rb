@@ -1,12 +1,4 @@
 class Pixiv < Source
-	@@main_host  = 'https://www.pixiv.net/'
-	@@ranking = 'ranking.php?mode=daily&content=illust'
-	@@url_pattern = /https:\/\/i.pximg.net\/c\/240x480\/img-master\/img\/(([0-9]|\/)+_p[0-9])((_|[a-z]|[0-9])*)?(\.[a-z]{3})/
-
-	@@auth_host = "https://accounts.pixiv.net/"
-	@@login_csrf = 'signup?lang=zh_tw&source=pc&view_type=page&ref=wwwtop_accounts_index'
-	@@login_post = 'api/login'
-
 	CDN_HOST = 'https://i.pximg.net/'
 	ORIGIN_IMG = '/img-original/img/'
 
@@ -14,6 +6,14 @@ class Pixiv < Source
 		super
 		@post_key = ''
 		@illus_ids = []
+		@@main_host  = 'https://www.pixiv.net/'
+		@@ranking = 'ranking.php?mode=daily&content=illust'
+		@@url_pattern = /https:\/\/i.pximg.net\/c\/240x480\/img-master\/img\/(([0-9]|\/)+_p[0-9])((_|[a-z]|[0-9])*)?(\.[a-z]{3})/
+
+		@@auth_host = "https://accounts.pixiv.net/"
+		@@login_csrf = 'signup?lang=zh_tw&source=pc&view_type=page&ref=wwwtop_accounts_index'
+		@@login_post = 'api/login'
+
 		get_post_key
 	end
 
@@ -48,9 +48,8 @@ class Pixiv < Source
 
 	def get_daily number
 		super 
-		
 		@agent.get(@@main_host + @@ranking) do |page|
-			@illus_ids = (page.body.scan(	@@url_pattern ).map{|t| t[0]+t[4]}.uniq - [""])
+			@illus_ids = (page.body.scan(	@@url_pattern ).map{|t| t[0] + t[4]}.uniq - [""])
 			@illus_ids = @illus_ids.sample @download_number
 		end
 		@illus_ids.empty? ? p('Failed') : p('Success')
@@ -63,7 +62,7 @@ class Pixiv < Source
 			p "download ~> #{id} at #{@save_path}"
 			file_name = id.gsub '/','_'
 			begin
-				@agent.get(CDN_HOST + ORIGIN_IMG + id,[], @@main_host).save(save_path + file_name)
+				@agent.get(CDN_HOST + ORIGIN_IMG + id,[], @@main_host).save(@save_path + file_name)
 			rescue
 				begin
 					png_id = id[0..-4] + 'png'
@@ -75,5 +74,11 @@ class Pixiv < Source
 			end
 		end
 	end
-	
+	def get_post_key
+		p_try 'get post_key'
+		@agent.get(@@auth_host + @@login_csrf) do |page|
+			@post_key = page.body.match(/postKey\":\"([a-zA-Z0-9]+)\"/)[1]
+			p "Success: post key: #{@post_key}"
+		end
+	end
 end
