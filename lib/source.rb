@@ -1,9 +1,11 @@
 class Source
-	@@main_host = ''
-	@@ranking = ''
-	@@url_pattern = ''
+	
+	def initialize opt={}
+		
+		@main_host = ''
+		@ranking = ''
+		@url_pattern = ''
 
-	def initialize
 		@save_path = ''
 		@download_number = 0
 		@agent = Mechanize.new { |agent|
