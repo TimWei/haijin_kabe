@@ -18,7 +18,7 @@
 ### 依賴
 - Ruby (建議2.0.0以上)
 - Bundler
-- Pixiv用戶帳號
+- Pixiv用戶帳號(Optional)
 
 ### 安裝與配置
 1. 解壓縮目錄後，使用文字編輯器打開config目錄下名為kabe_setting.yaml檔案，設定圖源(預設為pixiv.moe)，如為pixiv則需要一併輸入pixiv用戶名與密碼
