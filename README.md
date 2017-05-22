@@ -24,9 +24,10 @@
 1. 解壓縮目錄後，使用文字編輯器打開config目錄下名為kabe_setting.yaml檔案，設定圖源(預設為pixiv.moe)，如為pixiv則需要一併輸入pixiv用戶名與密碼
 ```yaml
 # You can select pixiv or pixiv.moe by following value
-# -pixiv_moe
-# -pixiv 
-source: 'pixiv_moe'
+# -'//pixiv.moe'
+# -'//pixiv.net'
+# -'//imjad.cn'
+source: '//pixiv.moe'
 
 # If you chose pixiv as image origin, downloading original image required auth or it'll returning 403 error 
 pixiv:
