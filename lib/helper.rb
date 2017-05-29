@@ -1,9 +1,11 @@
 class Helper
 	def self.clear_old_img
 		files = Dir['./img/*']
-		files.each do |file|
-			break if files.size <= 1
+		files.each_with_index do |file, i|
 			if file.match(/\.(jpg|png)/).nil?
+				next
+			elsif i == 0 
+				# left at least one image
 				next
 			else
 				`rm #{file}`
