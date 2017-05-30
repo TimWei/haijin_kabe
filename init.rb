@@ -5,7 +5,7 @@ puts 'Bundle installing...'
 `bundle install`
 
 puts 'Initializing...'
-`ruby lib/get_image.rb`
+`ruby lib/kabe.rb`
 
 puts 'Setting crontab...'
 `whenever --update-crontab`
