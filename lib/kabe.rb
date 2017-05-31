@@ -4,13 +4,11 @@ require 'json'
 require 'mechanize'
 require 'pry'
 require 'uri'
+require 'os'
 require_relative 'source'
 require_relative 'source/pixiv'
 require_relative 'source/third_party_api'
 require_relative 'helper'
-
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-I_KNOW_THAT_OPENSSL_VERIFY_PEER_EQUALS_VERIFY_NONE_IS_WRONG = nil
 
 Helper.clear_old_img
 setting = Helper.load_setting 

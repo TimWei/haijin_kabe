@@ -1,15 +1,10 @@
 require 'rufus-scheduler'
 require 'tzinfo/data'
 
-ENV['TZ'] = 'Asia/Taipei'
-scheduler = Rufus::Scheduler.new
+path = Dir.pwd 
 
-scheduler.every '1h' do
-  system 'ruby ./lib/kabe.rb'
-end
+# rescraping images hourly
+`schtasks /Create /TN haijin_kabe_get /SC HOURLY /MO 1 /TR "ruby #{path}/lib/kabe.rb"`
 
-scheduler.every '15m' do
-  system 'powershell.exe ./lib/chwall.ps1'
-end
-
-scheduler.join
+#change wallpaper 15 mins
+`schtasks /Create /TN haijin_kabe_change /SC MINUTE /MO 15 /TR "ruby #{path}/lib/chwall_win.rb"`
