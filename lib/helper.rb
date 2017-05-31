@@ -1,14 +1,16 @@
 class Helper
 	def self.clear_old_img
-		files = Dir['./img/*']
-		files.each_with_index do |file, i|
-			if file.match(/\.(jpg|png)/).nil?
-				next
-			elsif i == 0 
-				# left at least one image
-				next
-			else
-				detect_os_and_clear file
+		if internet_available?
+			files = Dir['./img/*']
+			files.each_with_index do |file, i|
+				if file.match(/\.(jpg|png)/).nil?
+					next
+				elsif i == 0 
+					# left at least one image
+					next
+				else
+					detect_os_and_clear file
+				end
 			end
 		end
 	end
@@ -18,9 +20,17 @@ class Helper
 	end
 	def self.detect_os_and_clear file
 		if OS.windows?
-			`rm #{file}`
+			`del "#{file.gsub('/','\\')}"`
 		else
-			`del #{file}`
+			`rm #{file}`
 		end
+	end
+
+	def self.internet_available?
+	  begin
+	    true if open("http://www.google.com/")
+	  rescue
+	    false
+	  end
 	end
 end
