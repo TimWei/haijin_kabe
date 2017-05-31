@@ -1,8 +1,10 @@
 require 'Win32API'
+require 'pry'
+require 'open-uri'
 
 SPI_SETDESKWALLPAPER = 20
 SPIF_SENDCHANGE = 0x2
-SOURCE_FOLDER = Dir.pwd + '/img/'
+SOURCE_FOLDER = File.dirname(__FILE__) + '/../img/'
 remain_images = 0
 file = ''
 
@@ -14,8 +16,12 @@ def change_wall
 	p systemParametersInfo.call(SPI_SETDESKWALLPAPER, 1, file, SPIF_SENDCHANGE)
 end
 
-def internet_avalable?
-	false
+def internet_available?
+  begin
+    true if open("http://www.google.com/")
+  rescue
+    false
+  end
 end
 
 def rm_file 
@@ -35,4 +41,8 @@ def main
 	end
 end
 
-main
+begin
+	main
+rescue => e
+	binding.pry
+end
