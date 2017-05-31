@@ -4,11 +4,11 @@ require 'json'
 require 'mechanize'
 require 'pry'
 require 'uri'
+require 'os'
 require_relative 'source'
 require_relative 'source/pixiv'
 require_relative 'source/third_party_api'
 require_relative 'helper'
-
 
 Helper.clear_old_img
 setting = Helper.load_setting 
