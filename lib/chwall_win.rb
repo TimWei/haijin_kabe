@@ -4,16 +4,16 @@ require 'open-uri'
 
 SPI_SETDESKWALLPAPER = 20
 SPIF_SENDCHANGE = 0x2
-SOURCE_FOLDER = File.dirname(__FILE__) + '/../img/'
+IMAGE_FOLDER = File.dirname(__FILE__) + '/../img/'
 @remain_images = 0
 @file = ''
 
 def change_wall
-	files = Dir.entries(SOURCE_FOLDER) - [".", ".."]
+	files = Dir.entries(IMAGE_FOLDER) - [".", ".."]
 	@remain_images = files.length
 	@file = files[rand(@remain_images)]
 	systemParametersInfo = Win32API.new("user32","SystemParametersInfo",["I", "I", "P", "I"],"I")
-	p systemParametersInfo.call(SPI_SETDESKWALLPAPER, 1, SOURCE_FOLDER + @file, SPIF_SENDCHANGE)
+	p systemParametersInfo.call(SPI_SETDESKWALLPAPER, 1, IMAGE_FOLDER + @file, SPIF_SENDCHANGE)
 end
 
 def internet_available?
@@ -26,7 +26,7 @@ end
 
 def rm_file 
 	if @file.match /\.(jpg|png)$/
-		Dir.chdir SOURCE_FOLDER
+		Dir.chdir IMAGE_FOLDER
 		`del "#{@file}"`
 	end
 end
