@@ -2,7 +2,7 @@
 > 給二次元黨的開發者們
 
 ## 簡介
-身為二次元黨，總是不斷的更換壁紙，於是做了個更換壁紙的排程腳本，初期版本提供OSX上運行；未來也計畫加入其他作業系統．
+身為二次元黨，總是不斷的更換壁紙，於是做了個更換壁紙的排程腳本，目前支援OSX與Windows版本．
 
 ## 特色
 - Ruby ftw
@@ -16,7 +16,7 @@
 
 ## 如何部署
 ### 依賴
-- Ruby (建議2.0.0以上)
+- Ruby (建議2.0.0以上) Windows用戶可在 [RubyInstaller](https://rubyinstaller.org/downloads/)找到一鍵安裝包
 - Bundler
 - Pixiv用戶帳號(Optional)
 
@@ -44,6 +44,3 @@ ruby init.rb
 3. 調整背景(Optional)
 於[調整桌面背景]中將壁紙放置方式改為[符合螢幕大小]
 
-
-## TODO
-- OS gem
