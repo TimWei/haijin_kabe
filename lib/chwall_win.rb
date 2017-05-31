@@ -26,8 +26,8 @@ end
 
 def rm_file 
 	if @file.match /\.(jpg|png)$/
-		file_path = 'img\\' + @file
-		`del "#{file_path}"`
+		Dir.chdir SOURCE_FOLDER
+		`del "#{@file}"`
 	end
 end
 
