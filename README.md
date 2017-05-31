@@ -38,6 +38,9 @@ pixiv:
 
 2. 於解壓縮目錄下，執行初始化
 ```
+bundle install
+```
+```
 ruby init.rb
 ```
 

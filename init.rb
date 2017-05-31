@@ -1,12 +1,8 @@
-
+require 'os'
 
 puts 'Initializing...'
 `ruby lib/kabe.rb` 
 
-puts 'Bundle installing...'
-`bundle install`
-
-require 'os'
 if OS.windows?
   puts 'preparing process for windows'
   `ruby config/windows_schedule.rb`
