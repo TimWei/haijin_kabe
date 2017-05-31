@@ -22,7 +22,7 @@ class Source
 
 	def download path = nil 
 		p_try 'downloading'
-		@save_path = path || "./img/"
+		@save_path = path || File.dirname(__FILE__) + "/../img/"
 	end
 
 	private

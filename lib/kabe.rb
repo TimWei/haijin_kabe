@@ -9,7 +9,7 @@ require_relative 'source'
 require_relative 'source/pixiv'
 require_relative 'source/third_party_api'
 require_relative 'helper'
-
+begin
 Helper.clear_old_img
 setting = Helper.load_setting 
 source = URI.parse(setting['source']).host
@@ -28,3 +28,6 @@ when 'imjad.cn'
 	ag.get_daily 5
 end
 
+rescue => e
+	binding.pry
+end

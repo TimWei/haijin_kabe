@@ -1,7 +1,7 @@
 class Helper
 	def self.clear_old_img
 		if internet_available?
-			files = Dir['./img/*']
+			files = Dir[File.dirname(__FILE__)+'/../img/*']
 			files.each_with_index do |file, i|
 				if file.match(/\.(jpg|png)/).nil?
 					next
@@ -16,7 +16,7 @@ class Helper
 	end
 
 	def self.load_setting
-		YAML.load_file 'config/kabe_setting.yaml'
+		YAML.load_file File.dirname(__FILE__)+'/../config/kabe_setting.yaml'
 	end
 	def self.detect_os_and_clear file
 		if OS.windows?
