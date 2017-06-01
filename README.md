@@ -9,6 +9,8 @@
 - 可擴充圖源網站
 - [Whenever](https://github.com/javan/whenever)套件管理crontab，易於維護與更改排程計畫
 - [Mechanize](https://github.com/sparklemotion/mechanize)抓取圖片數據以及登入
+- [pry](https://github.com/pry/pry)
+- [os](https://github.com/rdp/os)判斷作業系統是否為Windows
 - 週期性從[Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust)隨機抓取桌布使用
 
 ## 倉庫
