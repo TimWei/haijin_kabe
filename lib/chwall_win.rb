@@ -45,5 +45,6 @@ end
 begin
 	main
 rescue => e
+	puts e.message
 	binding.pry
 end
