@@ -18,6 +18,7 @@ class Helper
 	def self.load_setting
 		YAML.load_file File.dirname(__FILE__)+'/../config/kabe_setting.yaml'
 	end
+	
 	def self.detect_os_and_clear file
 		if OS.windows?
 			`del "#{file.gsub('/','\\')}"`
