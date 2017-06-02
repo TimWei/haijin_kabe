@@ -2,8 +2,8 @@ PATH = Dir.pwd
 HIDE_WIN = PATH + '/lib/hidewin.vbs'
 
 def remove_old_sche
-	`schtasks /delete /TN haijin_kabe_get /f`
-	`schtasks /delete /TN haijin_kabe_change /f`
+	`schtasks /delete /TN haijin_kabe_get /f >NUL 2>&1`
+	`schtasks /delete /TN haijin_kabe_change /f >NUL 2>&1`
 end
 
 def new_sche
