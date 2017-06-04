@@ -1,7 +1,7 @@
 # Haijin-Kabe: Japanese Comics Wallpapers
 > To All Anime Nerds.
 
-Read this in other languages: 正體中文(https://github.com/TimWei/haijin_kabe/blob/master/README.md)
+Read this in other languages: [正體中文](https://github.com/TimWei/haijin_kabe/blob/master/README.md)
 
 ## Introduction
 Haijin-Kabe is a light, automatic and cross-platform (currently OSX & Windows) wallpaper changer. As a citizen of Manga World, the only thing that is constant is--changing wallpaper.
