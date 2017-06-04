@@ -1,6 +1,8 @@
 # Haijin-Kabe 廢人壁
 > 給二次元黨的開發者們
 
+其他語言版本: English(https://github.com/TimWei/haijin_kabe/blob/master/README.en-us.md)
+
 ## 簡介
 身為二次元黨，總是不斷的更換壁紙，於是做了個更換壁紙的排程腳本，目前支援OSX與Windows版本．
 
