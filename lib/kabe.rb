@@ -2,7 +2,6 @@ require 'yaml'
 require 'open-uri'
 require 'json'
 require 'mechanize'
-require 'pry'
 require 'uri'
 require 'os'
 require_relative 'source'
@@ -31,5 +30,4 @@ begin
 
 rescue => e
 	puts e.message
-	binding.pry
 end

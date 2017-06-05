@@ -1,5 +1,4 @@
 require 'Win32API'
-require 'pry'
 require 'open-uri'
 
 SPI_SETDESKWALLPAPER = 20
@@ -46,5 +45,4 @@ begin
 	main
 rescue => e
 	puts e.message
-	binding.pry
 end
