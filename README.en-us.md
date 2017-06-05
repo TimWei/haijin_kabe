@@ -9,9 +9,9 @@ Haijin-Kabe is a light, automatic and cross-platform (currently OSX & Windows) w
 ## Features
 - Ruby ftw
 - Images Resource Expandability
-- [Whenever](https://github.com/javan/whenever) Ruby interface for deploying and managing crontab
-- [Mechanize](https://github.com/sparklemotion/mechanize) Crawling images from websites, and user authorization if needed 
-- [os](https://github.com/rdp/os) Detecting OS automatic
+- Ruby interface for deploying and managing crontab W/[Whenever](https://github.com/javan/whenever) 
+- Crawling images from websites and user authorization W/[Mechanize](https://github.com/sparklemotion/mechanize)
+- Detecting OS automatic W/[os](https://github.com/rdp/os) 
 - Randomly crawling images from [Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust) as our wallpaper
 
 ## Repository
