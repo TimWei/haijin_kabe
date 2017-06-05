@@ -9,11 +9,10 @@
 ## 特色
 - Ruby ftw
 - 可擴充圖源網站
-- [Whenever](https://github.com/javan/whenever)套件管理crontab，易於維護與更改排程計畫
-- [Mechanize](https://github.com/sparklemotion/mechanize)抓取圖片數據以及登入
-- [pry](https://github.com/pry/pry)
-- [os](https://github.com/rdp/os)判斷作業系統是否為Windows
-- 週期性從[Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust)隨機抓取桌布使用
+- [Whenever](https://github.com/javan/whenever)crontab排程管理Ruby套件，提供較人性之介面
+- [Mechanize](https://github.com/sparklemotion/mechanize)抓取圖片數據以及用戶驗證
+- [os](https://github.com/rdp/os)自動判斷作業系統
+- 週期性從[Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust)或其它第三方API隨機抓取圖片做為桌布
 
 ## 倉庫
 [Github](https://github.com/TimWei/haijin_kabe)
