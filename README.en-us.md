@@ -37,6 +37,14 @@ pixiv:
   account: 
   password: 
 
+#frequency of chwall.sh/chwall_win.rb and kabe.rb
+#minutes
+freq:
+  #change current wallpapper
+  chwall: 15
+  #scrap images from source
+  kabe: 60
+
 ```
 
 2. run commands under the repository you extract

@@ -37,6 +37,14 @@ pixiv:
   account: 
   password: 
 
+#frequency of chwall.sh/chwall_win.rb and kabe.rb
+#minutes
+freq:
+  #切換壁紙的週期(分鐘)
+  chwall: 15
+  #收集壁紙的週期(分鐘)
+  kabe: 60
+
 ```
 
 2. 於解壓縮目錄下，執行初始化
