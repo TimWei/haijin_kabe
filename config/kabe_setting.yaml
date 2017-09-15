@@ -12,5 +12,5 @@ pixiv:
 #frequency of chwall.sh/chwall_win.rb and kabe.rb
 #minutes
 frequency:
-  change_wallpapper: 15
-  download_new_image: 60
+  change_wallpapper: 1
+  download_new_image: 2

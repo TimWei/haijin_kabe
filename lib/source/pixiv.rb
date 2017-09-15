@@ -15,6 +15,7 @@ class Pixiv < Source
 		@login_post = 'api/login'
 
 		get_post_key
+		login opt[:account], opt[:password]
 	end
 
 	def login account, password
