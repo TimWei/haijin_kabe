@@ -1,12 +1,12 @@
 require 'yaml'
 
 set :output, '/dev/null'
-freq = YAML.load_file(File.dirname(__FILE__)+'/kabe_setting.yaml')['freq']
+freq = YAML.load_file(File.dirname(__FILE__)+'/kabe_setting.yaml')['frequency']
 
-every freq['kabe'].minutes do 
+every freq['download_new_image'].minutes do 
 	command "cd #{path};ruby ./lib/kabe.rb"
 end
 
-every freq['chwall'].minutes do 
+every freq['change_wallpapper'].minutes do 
 	command "cd #{path};sh ./lib/chwall.sh"
 end

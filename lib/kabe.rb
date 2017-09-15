@@ -13,8 +13,8 @@ begin
 	Helper.clear_old_img
 	setting = Helper.load_setting 
 	source = URI.parse(setting['source']).host
-	freq = setting['freq']
-	pic_num = (freq['kabe'] / freq['chwall']) + 1
+	freq = setting['frequency']
+	pic_num = (freq['download_new_image'] / freq['change_wallpapper']) + 1
 	case source
 	when 'pixiv.net'
 		pixiv_info = setting['pixiv']
