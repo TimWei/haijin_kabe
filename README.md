@@ -39,11 +39,11 @@ pixiv:
 
 #frequency of chwall.sh/chwall_win.rb and kabe.rb
 #minutes
-freq:
+frequency:
   #切換壁紙的週期(分鐘)
-  chwall: 15
+  change_wallpapper: 15
   #收集壁紙的週期(分鐘)
-  kabe: 60
+  download_new_image: 60
 
 ```
 

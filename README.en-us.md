@@ -39,11 +39,11 @@ pixiv:
 
 #frequency of chwall.sh/chwall_win.rb and kabe.rb
 #minutes
-freq:
+frequency:
   #change current wallpapper
-  chwall: 15
+  change_wallpapper: 15
   #scrap images from source
-  kabe: 60
+  download_new_image: 60
 
 ```
 
