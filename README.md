@@ -29,7 +29,6 @@
 # You can select pixiv or pixiv.moe by following value
 # -'//pixiv.moe'
 # -'//pixiv.net'
-# -'//imjad.cn'
 source: '//pixiv.moe'
 
 # If you chose pixiv as image origin, downloading original image required auth or it'll returning 403 error 
