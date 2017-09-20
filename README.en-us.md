@@ -36,10 +36,10 @@ pixiv:
   account: 
   password: 
 
-#frequency of chwall.sh/chwall_win.rb and kabe.rb
+#frequency of downloading images and changing wallpaper
 #minutes
 frequency:
-  #change current wallpapper
+  #changing wallpapper
   change_wallpapper: 15
   #scrap images from source
   download_new_image: 60

@@ -12,7 +12,7 @@
 - 使用Ruby介面管理Crontab計畫任務 ([Whenever](https://github.com/javan/whenever))
 - 抓取圖片數據以及用戶驗證 ([Mechanize](https://github.com/sparklemotion/mechanize))
 - 自動判斷作業系統 ([os](https://github.com/rdp/os))
-- 週期性從[Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust)或其它第三方API隨機抓取圖片做為桌布
+- 週期性從[Pixiv Rank](http://www.pixiv.net/ranking.php?mode=daily&content=illust)或其它第三方API隨機抓取圖片做為桌面壁紙
 
 ## 倉庫
 [Github](https://github.com/TimWei/haijin_kabe)
@@ -26,18 +26,18 @@
 ### 安裝與配置
 1. 解壓縮目錄後，使用文字編輯器打開config目錄下名為kabe_setting.yaml檔案，設定圖源(預設為pixiv.moe)，如為pixiv則需要一併輸入pixiv用戶名與密碼
 ```yaml
-# You can select pixiv or pixiv.moe by following value
+# 可選擇從Pixiv官網或第三方源如 pixiv.moe作為圖源
 # -'//pixiv.moe'
 # -'//pixiv.net'
 source: '//pixiv.moe'
 
-# If you chose pixiv as image origin, downloading original image required auth or it'll returning 403 error 
+# 當選擇從Pixiv官網作為圖源时，需要Pixiv用戶信息作為用戶驗證，否則將返回403錯
 pixiv:
   account: 
   password: 
 
-#frequency of chwall.sh/chwall_win.rb and kabe.rb
-#minutes
+#抓取圖片與更換壁紙的頻率
+#分鐘
 frequency:
   #切換壁紙的週期(分鐘)
   change_wallpapper: 15
